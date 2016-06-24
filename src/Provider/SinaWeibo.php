@@ -23,17 +23,6 @@ use League\OAuth2\Client\Token\AccessToken;
 class SinaWeibo extends AbstractProvider
 {
 
-    /**
-     * SinaWeibo constructor.
-     * @param array $options
-     * @param array $config
-     */
-    public function __construct($options, $config = [])
-    {
-        $client = (count($config) > 0 ? new HttpClient($config) : new HttpClient());
-
-        parent::__construct($options, ['httpClient' => $client]);
-    }
 
     /**
      * Returns the base URL for authorizing a client.
