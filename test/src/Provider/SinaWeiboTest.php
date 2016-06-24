@@ -1,4 +1,4 @@
-<?php namespace League\OAuth2\Client\Test\Provider;
+<?php namespace Xiabin\OAuth2\Client\Test\Provider;
 
 use Mockery as m;
 
@@ -45,6 +45,28 @@ class SinaWeiboTest extends \PHPUnit_Framework_TestCase
         $this->assertContains(urlencode(implode(',', $options['scope'])), $url);
     }
 
+    public function testGetAuthorizationUrl()
+    {
+        $url = $this->provider->getAuthorizationUrl();
+        $uri = parse_url($url);
+
+        $this->assertEquals('/oauth2/authorize', $uri['path']);
+    }
+
+    public function testGetBaseAccessTokenUrl()
+    {
+        $params = [
+            'client_id' => 'client_id',
+            'client_secret' => 'client_secret',
+            'grant_type' => 'grant_type',
+            'redirect_uri' => 'redirect_uri',
+            'code' => 'code'
+        ];
+        $url = $this->provider->getBaseAccessTokenUrl($params);
+        $uri = parse_url($url);
+
+        $this->assertEquals('/oauth2/access_token', $uri['path']);
+    }
 
     public function testGetAccessToken()
     {
@@ -67,9 +89,25 @@ class SinaWeiboTest extends \PHPUnit_Framework_TestCase
 
 
 
+
     /**
      * @expectedException League\OAuth2\Client\Provider\Exception\IdentityProviderException
      **/
+    public function testExceptionThrownWhenErrorObjectReceived()
+    {
+        $status = rand(400, 600);
+        $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
+        $postResponse->shouldReceive('getBody')->andReturn('{"message": "Validation Failed","errors": [{"resource": "Issue","field": "title","code": "missing_field"}]}');
+        $postResponse->shouldReceive('getHeader')->andReturn(['content-type' => 'json']);
+        $postResponse->shouldReceive('getStatusCode')->andReturn($status);
+
+        $client = m::mock('GuzzleHttp\ClientInterface');
+        $client->shouldReceive('send')
+            ->times(1)
+            ->andReturn($postResponse);
+        $this->provider->setHttpClient($client);
+        $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
+    }
 
     /**
      * @expectedException League\OAuth2\Client\Provider\Exception\IdentityProviderException
