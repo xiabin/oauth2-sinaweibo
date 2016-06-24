@@ -36,14 +36,6 @@ class SinaWeiboTest extends \PHPUnit_Framework_TestCase
     }
 
 
-    public function testScopes()
-    {
-        $options = ['scope' => [uniqid(), uniqid()]];
-
-        $url = $this->provider->getAuthorizationUrl($options);
-
-        $this->assertContains(urlencode(implode(',', $options['scope'])), $url);
-    }
 
     public function testGetAuthorizationUrl()
     {
