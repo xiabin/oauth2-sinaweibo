@@ -16,7 +16,7 @@
     "authorization",
     "authorisation",
     "sina weibo"
-  ]
+  ],
   "minimum-stability": "beta",
   "require": {
     "php": ">=5.5.0",
