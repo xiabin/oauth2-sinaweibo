@@ -1,6 +1,6 @@
 # SinaWeibo Provider for OAuth 2.0 Client
 
-
+[![license](https://img.shields.io/github/license/xiabin/oauth2-sinaweibo.svg?maxAge=2592000)](https://github.com/xiabin/oauth2-sinaweibo/blob/master/LICENSE.md)
 [![Packagist](https://img.shields.io/packagist/v/xiabin/oauth2-sinaweibo.svg?maxAge=2592000?style=plastic)](https://packagist.org/packages/xiabin/oauth2-sinaweibo)
 [![Build Status](https://travis-ci.org/xiabin/oauth2-sinaweibo.svg?branch=master)](https://travis-ci.org/xiabin/oauth2-sinaweibo)
 [![Coverage Status](https://scrutinizer-ci.com/g/xiabin/oauth2-sinaweibo/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/xiabin/oauth2-sinaweibo/code-structure)
