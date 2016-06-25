@@ -6,6 +6,8 @@
 [![Coverage Status](https://scrutinizer-ci.com/g/xiabin/oauth2-sinaweibo/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/xiabin/oauth2-sinaweibo/code-structure)
 [![Quality Score](https://scrutinizer-ci.com/g/thephpleague/oauth2-github/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/xiabin/oauth2-sinaweibo/)
 [![Packagist](https://img.shields.io/packagist/dt/xiabin/oauth2-sinaweibo.svg?maxAge=2592000)](https://packagist.org/packages/xiabin/oauth2-sinaweibo)
+
+
  这个组件基于 PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## 安装
