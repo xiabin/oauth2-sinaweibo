@@ -1,4 +1,7 @@
 # SinaWeibo Provider for OAuth 2.0 Client
+[![Build Status](hhttps://travis-ci.org/xiabin/oauth2-sinaweibo.svg?branch=master
+)](https://travis-ci.org/xiabin/oauth2-sinaweibo)
+
  这个组件基于 PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## 安转
