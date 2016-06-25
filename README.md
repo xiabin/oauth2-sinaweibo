@@ -5,7 +5,7 @@
 
  这个组件基于 PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
-## 安转
+## 安装
 
 用composer安装:
 
@@ -60,4 +60,4 @@ $ ./vendor/bin/phpunit
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/xiabin/oauth2-sinaweibo/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/xiabin/oauth2-sinaweibo/master/LICENSE.md) for more information.
