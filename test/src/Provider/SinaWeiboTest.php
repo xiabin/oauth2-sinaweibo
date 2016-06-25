@@ -36,7 +36,6 @@ class SinaWeiboTest extends \PHPUnit_Framework_TestCase
     }
 
 
-
     public function testGetAuthorizationUrl()
     {
         $url = $this->provider->getAuthorizationUrl();
@@ -78,8 +77,6 @@ class SinaWeiboTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($token->getRefreshToken());
         $this->assertNull($token->getResourceOwnerId());
     }
-
-
 
 
     /**
