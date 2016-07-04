@@ -25,8 +25,8 @@ composer require xiabin/oauth2-sinaweibo
 
 ```php
 $provider = new Xiabin\OAuth2\Client\Provider\SinaWeibo([
-    'clientId'          => '{github-client-id}',
-    'clientSecret'      => '{github-client-secret}',
+    'clientId'          => '{sinaweibo-client-id}',
+    'clientSecret'      => '{sinaweibo-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
 ]);
 
