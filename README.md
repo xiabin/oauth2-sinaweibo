@@ -65,4 +65,4 @@ $ ./vendor/bin/phpunit
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/xiabin/oauth2-sinaweibo/blob/master/LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/xiabin/oauth2-sinaweibo/blob/master/LICENSE.md  ) for more information.
